@@ -32,11 +32,11 @@ pipeline {
                         --role-name $lambdaRole \
                         --assume-role-policy-document file://trust-policy.json
                     '''
-                    //  Attach AWSLambdaBasicExecutionRole policy to role
+                    //  Attach AWSLambdaBasicExecutionRole2 policy to role add two to the name
                     sh """
                         aws iam attach-role-policy \
                         --role-name ${lambdaRole} \
-                        --policy-arn arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
+                        --policy-arn arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole2
                     """
                     //  Attach AmazonDynamoDBFullAccess policy to role
                     sh """
