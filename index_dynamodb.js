@@ -1,4 +1,5 @@
 // Load the AWS SDK for Node.js
+//original index 
 var AWS = require('aws-sdk');
 AWS.config.update({region: 'ap-southeast-2'})
 
