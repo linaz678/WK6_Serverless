@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        lambdaRole      = "GetStartedLambdaBasicExecutionRole"
+        lambdaRole      = "GetStartedLambdaBasicExecutionRole2"
         lambdaName      = "GetStartedLambdaProxyIntegration"
         lambdaFileName  = "*.js"
         lambdaRuntime   = "nodejs16.x"
@@ -36,7 +36,7 @@ pipeline {
                     sh """
                         aws iam attach-role-policy \
                         --role-name ${lambdaRole} \
-                        --policy-arn arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole2
+                        --policy-arn arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
                     """
                     //  Attach AmazonDynamoDBFullAccess policy to role
                     sh """
