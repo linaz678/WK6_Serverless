@@ -1,5 +1,5 @@
 'use strict';
-client.collectDefaultMetrics({register});
+// client.collectDefaultMetrics({register});
 
 console.log('Loading hello world function');
 
