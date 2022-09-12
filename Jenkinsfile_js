@@ -32,7 +32,7 @@ pipeline {
                         --role-name $lambdaRole \
                         --assume-role-policy-document file://trust-policy.json
                     '''
-                    //  Attach AWSLambdaBasicExecutionRole2 policy to role add two to the name
+                    //  Attach Bascic exeution role AWSLambdaBasicExecutionRole2 policy to role to the name
                     sh """
                         aws iam attach-role-policy \
                         --role-name ${lambdaRole} \
